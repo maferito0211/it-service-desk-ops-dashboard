@@ -6,6 +6,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
 ## Ticket Identification
 
 ### Ticket ID
+
 - Data type: str
 - Nulls: 0
 - Unique values: 100000
@@ -16,6 +17,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
 ## Ticket Classification and Ownership
 
 ### Source
+
 - Data type: str
 - Nulls: 0
 - Unique values: 4
@@ -28,6 +30,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
   - Portal
 
 ### Topic
+
 - Data type: str
 - Nulls: 0
 - Unique values: 5
@@ -41,6 +44,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
   - Software Bug
 
 ### Product group
+
 - Data type: str
 - Nulls: 0
 - Unique values: 4
@@ -53,6 +57,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
   - Software
 
 ### Support Level
+
 - Data type: str
 - Nulls: 0
 - Unique values: 3
@@ -64,6 +69,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
   - L3
 
 ### Agent Group
+
 - Data type: str
 - Nulls: 0
 - Unique values: 5
@@ -77,6 +83,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
   - Security
 
 ### Agent Name
+
 - Data type: str
 - Nulls: 0
 - Unique values: 80
@@ -87,6 +94,7 @@ Columns are grouped by purpose to make the dataset easier to understand.
 ## Ticket Status and Lifecycle
 
 ### Status
+
 - Data type: str
 - Nulls: 0
 - Unique values: 5
@@ -100,11 +108,33 @@ Columns are grouped by purpose to make the dataset easier to understand.
   - Resolved
 - Notes: Recommended backlog definition for this project is Status in (New, Open, In Progress). Completed tickets are Status in (Resolved, Closed).
 
+### Priority
+
+- Data type: str
+- Nulls: 0
+- Unique values: 4
+- Description: Ticket urgency level used to set SLA targets and to prioritize work.
+- Used for:
+  - Grouping SLA performance (response and resolution)
+  - Comparing workload and performance by urgency level
+  - Filtering dashboard views by urgency
+
+- Allowed values (from dataset):
+  - Critical
+  - High
+  - Medium
+  - Low
+
+- Notes:
+  - In this dataset, SLA targets are provided as deadline timestamps (Expected SLA to first response, Expected SLA to resolve).
+  - Priority is the main driver of those SLA deadlines, so it is treated as a key business dimension in KPI reporting.
+
 ## Time and SLA Fields
 
 Note: In the raw CSV these columns are strings; parse to datetime during cleaning.
 
 ### Created time
+
 - Data type: datetime64[us]
 - Nulls: 0
 - Unique values: 77880
@@ -115,6 +145,7 @@ Note: In the raw CSV these columns are strings; parse to datetime during cleanin
 - Maximum observed: 2024-08-12 3:57
 
 ### First response time
+
 - Data type: datetime64[us]
 - Nulls: 0
 - Unique values: 77880
@@ -125,6 +156,7 @@ Note: In the raw CSV these columns are strings; parse to datetime during cleanin
 - Maximum observed: 2024-08-12 3:58
 
 ### Resolution time
+
 - Data type: datetime64[us]
 - Nulls: 0
 - Unique values: 77880
@@ -135,6 +167,7 @@ Note: In the raw CSV these columns are strings; parse to datetime during cleanin
 - Maximum observed: 2024-08-12 3:59
 
 ### Close time
+
 - Data type: datetime64[us]
 - Nulls: 0
 - Unique values: 77880
@@ -145,6 +178,7 @@ Note: In the raw CSV these columns are strings; parse to datetime during cleanin
 - Maximum observed: 2024-08-12 3:59
 
 ### Expected SLA to first response
+
 - Data type: datetime64[us]
 - Nulls: 0
 - Unique values: 77880
@@ -155,6 +189,7 @@ Note: In the raw CSV these columns are strings; parse to datetime during cleanin
 - Maximum observed: 2024-08-12 4:27
 
 ### Expected SLA to resolve
+
 - Data type: datetime64[us]
 - Nulls: 0
 - Unique values: 77880
@@ -166,12 +201,13 @@ Note: In the raw CSV these columns are strings; parse to datetime during cleanin
 
 ## SLA Outcome Labels Provided in Dataset
 
-Note: In this dataset, every ticket is marked as "Met" for both response SLA and resolution SLA. 
-There are no tickets labeled as "Breached". 
-This means the provided SLA flags do not show any SLA failures. 
+Note: In this dataset, every ticket is marked as "Met" for both response SLA and resolution SLA.
+There are no tickets labeled as "Breached".
+This means the provided SLA flags do not show any SLA failures.
 For this reason, SLA performance must be independently recalculated by comparing the actual timestamps against the SLA deadline timestamps.
 
 ### SLA For first response
+
 - Data type: str
 - Nulls: 0
 - Unique values: 1
@@ -182,6 +218,7 @@ For this reason, SLA performance must be independently recalculated by comparing
 - Notes: In this dataset the observed value set contains only Met. The project will recalculate SLA compliance to validate this.
 
 ### SLA For Resolution
+
 - Data type: str
 - Nulls: 0
 - Unique values: 1
@@ -194,6 +231,7 @@ For this reason, SLA performance must be independently recalculated by comparing
 ## Workload and Quality
 
 ### Agent interactions
+
 - Data type: int64
 - Nulls: 0
 - Unique values: 5
@@ -204,6 +242,7 @@ For this reason, SLA performance must be independently recalculated by comparing
 - Notes: Use as numeric measure of effort and communication volume.
 
 ### Survey results
+
 - Data type: str
 - Nulls: 0
 - Unique values: 3
@@ -217,6 +256,7 @@ For this reason, SLA performance must be independently recalculated by comparing
 ## Location
 
 ### Country
+
 - Data type: str
 - Nulls: 0
 - Unique values: 6
@@ -231,6 +271,7 @@ For this reason, SLA performance must be independently recalculated by comparing
   - UAE
 
 ### Latitude
+
 - Data type: float64
 - Nulls: 0
 - Unique values: 77880
@@ -240,6 +281,7 @@ For this reason, SLA performance must be independently recalculated by comparing
 - Maximum observed: 26.0476
 
 ### Longitude
+
 - Data type: float64
 - Nulls: 0
 - Unique values: 77880
@@ -253,33 +295,37 @@ For this reason, SLA performance must be independently recalculated by comparing
 The following columns are created during transformation (they are not in the raw dataset).
 
 ### first_response_minutes
+
 - Data type: numeric
 - Description: Minutes between Created time and First response time.
 - Formula: (First response time - Created time) in minutes.
 
 ### resolution_minutes
+
 - Data type: numeric
 - Description: Minutes between Created time and Resolution time.
 - Formula: (Resolution time - Created time) in minutes.
 
 ### response_sla_met_recalc
+
 - Data type: boolean
 - Description: Recalculated response SLA outcome.
 - Logic: First response time <= Expected SLA to first response.
 
 ### resolution_sla_met_recalc
+
 - Data type: boolean
 - Description: Recalculated resolution SLA outcome.
 - Logic: Resolution time <= Expected SLA to resolve.
 
 ### backlog_flag
+
 - Data type: boolean
 - Description: Flags tickets that are considered open backlog.
 - Logic: Status in (New, Open, In Progress).
 
 ### satisfaction_score
+
 - Data type: integer
 - Description: Numeric satisfaction score for analysis.
 - Mapping: Satisfied = 3, Neutral = 2, Dissatisfied = 1.
-
-
