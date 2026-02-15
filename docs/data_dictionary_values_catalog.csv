@@ -1,0 +1,23 @@
+column,dtype,null_count,unique_count,min,max,allowed_values,top_values,note
+Agent Group,str,0,5,,,"Customer Service, Development, IT Support, Network Ops, Security",,
+Agent Name,str,0,80,,,,Mohammed Al-Hamdan(1491); Khalid Al-Sabah(1483); Abdullah Al-Farsi(1461); Fahad Al-Nasser(1451); Mohammed Al-Khalifa(1447); Fahad Al-Mansoori(1445); Yousef Al-Salem(1444); Khalid Al-Nasser(1435); Fahad Al-Hamdan(1427); Yousef Al-Nasser(1426); Abdullah Al-Hamdan(1425); Mohammed Al-Sabah(1425); Ahmed Al-Khalifa(1424); Ahmed Al-Sabah(1415); Ali Al-Sabah(1414); Khalid Al-Mansoori(1411); Ahmed Al-Mansoori(1407); Hassan Al-Farsi(1402); Saif Al-Farsi(1401); Fahad Al-Khalifa(1398),High-cardinality column. Showing top 20 values only.
+Agent interactions,int64,0,5,1,5,,5(20184); 2(20014); 3(19983); 1(19942); 4(19877),
+Close time,datetime64[us],0,77880,2024-04-01 0:52,2024-08-12 3:59,,,
+Country,str,0,6,,,"Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, UAE",,
+Created time,datetime64[us],0,77910,2024-04-01 0:00,2024-08-11 23:58,,,
+Expected SLA to first response,datetime64[us],0,78000,2024-04-01 0:12,2024-08-12 0:55,,,
+Expected SLA to resolve,datetime64[us],0,77840,2024-04-01 1:02,2024-08-12 3:55,,,
+First response time,datetime64[us],0,77901,2024-04-01 0:06,2024-08-12 0:55,,,
+Latitude,float64,0,36739,22,25.9999,,25.329(11); 23.9769(11); 22.531(11); 23.9169(11); 25.0665(10); 24.9794(10); 22.4884(10); 25.2056(10); 23.9471(10); 23.8417(10); 24.685(10); 24.6756(9); 25.0863(9); 23.9346(9); 24.3274(9); 23.2424(9); 22.7925(9); 24.5376(9); 25.5865(9); 24.9559(9),
+Longitude,float64,0,48697,50,55.9999,,54.1922(9); 51.0879(8); 55.1875(8); 54.2274(8); 52.0865(8); 52.5793(8); 52.7031(8); 54.4623(8); 50.2548(8); 51.7835(8); 55.9712(8); 50.1408(8); 51.4403(8); 52.811(8); 55.4002(8); 51.8249(8); 54.953(8); 51.3061(8); 50.5173(7); 51.8521(7),
+Priority,str,0,4,,,"Critical, High, Low, Medium",,
+Product group,str,0,4,,,"Cloud, Hardware, Network, Software",,
+Resolution time,datetime64[us],0,78103,2024-04-01 0:50,2024-08-12 3:55,,,
+SLA For Resolution,str,0,1,,,Met,,
+SLA For first response,str,0,1,,,Met,,
+Source,str,0,4,,,"Chat, Email, Phone, Portal",,
+Status,str,0,5,,,"Closed, In Progress, New, Open, Resolved",,
+Support Level,str,0,3,,,"L1, L2, L3",,
+Survey results,str,0,3,,,"Dissatisfied, Neutral, Satisfied",,
+Ticket ID,str,0,100000,,,,TCKT-100000(1); TCKT-100001(1); TCKT-100002(1); TCKT-100003(1); TCKT-100004(1); TCKT-100005(1); TCKT-100006(1); TCKT-100007(1); TCKT-100008(1); TCKT-100009(1); TCKT-100010(1); TCKT-100011(1); TCKT-100012(1); TCKT-100013(1); TCKT-100014(1); TCKT-100015(1); TCKT-100016(1); TCKT-100017(1); TCKT-100018(1); TCKT-100019(1),High-cardinality column. Showing top 20 values only.
+Topic,str,0,5,,,"Access Request, General Inquiry, Hardware Failure, Network Issue, Software Bug",,

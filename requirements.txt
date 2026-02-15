@@ -1,0 +1,8 @@
+pandas
+numpy
+python-dateutil
+jupyter
+matplotlib
+sqlalchemy
+psycopg2-binary
+pytest
