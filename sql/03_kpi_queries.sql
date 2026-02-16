@@ -353,4 +353,3 @@ WHERE f.backlog_flag = TRUE
 GROUP BY 1
 ORDER BY backlog_tickets DESC
 LIMIT 10;
-
