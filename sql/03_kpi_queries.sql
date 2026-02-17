@@ -1,3 +1,5 @@
+
+
 -- =====================================================
 -- 03_kpi_queries.sql
 -- IT Service Desk & Support Ops - Core KPIs (PostgreSQL)
